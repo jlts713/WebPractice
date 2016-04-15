@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	
+	<link rel=stylesheet type="text/css" href="style.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Short+Stack' rel='stylesheet' type='text/css'>
+	
+	<script type="text/javascript" src="calculator.js"></script>
+	
+</head>
+
+<body>
+	<div id="header">
+	<!--img src="./img/house.gif" width="42" height="40" border="0"></img-->
+	<span>Calculator</span>
+	</div>
+	
+	<div id="calculator">
+	<input type="text" id="output" value="0"></input>
+	<table>
+		<tr>
+			<td><input type="button" class="btn" id="sym" value="sin" onClick="mathematics('sin');"></input></td>
+			<td><input type="button" class="btn" id="sym" value="√" onClick="mathematics('sqrt');"></input></td>
+			<td><input type="button" class="num" id="sym" value="7" onClick="showText('7');"></input></td>
+			<td><input type="button" class="num" id="sym" value="8" onClick="showText('8');"></input></td>
+			<td><input type="button" class="num" id="sym" value="9" onClick="showText('9');"></input></td>
+			<td><input type="button" class="btn" id="sym" value="÷" onClick="showText('/');"></input></td>
+			<td><input type="button" class="btn" id="sym" value="DEL" onClick="deleteChar();"></input></td>
+		</tr>
+		<tr>
+			<td><input type="button" class="btn" id="sym" value="cos" onClick="mathematics('cos');"></input></td>
+			<td><input type="button" class="btn" id="sym" value="exp" onClick="mathematics('exp');"></input></td>
+			<td><input type="button" class="num" id="sym" value="4" onClick="showText('4');"></input></td>
+			<td><input type="button" class="num" id="sym" value="5" onClick="showText('5');"></input></td>
+			<td><input type="button" class="num" id="sym" value="6" onClick="showText('6');"></input></td>
+			<td><input type="button" class="btn" id="sym" value="×" onClick="showText('*');"></input></td>
+			<td><input type="button" class="btn" id="sym" value="AC" onClick="clearAll();"></input></td>
+			
+		</tr>
+		<tr>
+			<td><input type="button" class="btn" id="sym" value="tan" onClick="mathematics('tan');"></input></td>
+			<td><input type="button" class="btn" id="sym" value="ln" onClick="mathematics('log');"></input></td>
+			<td><input type="button" class="num" id="sym" value="1" onClick="showText('1');"></input></td>
+			<td><input type="button" class="num" id="sym" value="2" onClick="showText('2');"></input></td>
+			<td><input type="button" class="num" id="sym" value="3" onClick="showText('3');"></input></td>
+			<td><input type="button" class="btn" id="sym" value="-" onClick="showText('-');"></input></td>
+			<td rowspan="3"><input type="button" class="btn" id="eqal" value="=" onClick="calculate();"></input></td>
+		</tr>
+		<tr>
+			<td><input type="button" class="btn" id="sym" value="(" onClick="showText('(')"></input></td>
+			<td><input type="button" class="btn" id="sym" value=")" onClick="showText(')')"></input></td>
+			<td colspan="2"><input type="button" class="num" value="0" id="zero" onClick="showText('0');"></input></td>
+			<td><input type="button" class="num" value="." id="sym" onClick="showText('.');"></input></td>
+			<td><input type="button" class="btn" value="+" id="sym" onClick="showText('+');"></input></td>
+		</tr>
+	</table>
+	<div>
+
+</body>
+
+</html>

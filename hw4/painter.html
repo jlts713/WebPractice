@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Painter</title>
+	
+	<link href='http://fonts.googleapis.com/css?family=Flavors' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+	
+	<link rel=stylesheet type="text/css" href="style.css">
+	<script type="text/javascript" src="paint.js"></script>
+	<script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+</head>
+
+
+<body>
+	<div id="header">
+		<span>Painter</span>
+	</div>
+	<div id="panel">
+		<font>Brush:</font><br>
+		<input type="image" class="toolbtn" src="./img/pencil.gif" value="pencil" onclick="changeTool(this.value);"></input>
+		<!--input type="image" class="toolbtn" src="./img/pen.png" value="pen" onclick="changeTool(this.value);"></input-->
+		<input type="image" class="toolbtn" src="./img/marker.png" value="marker" onclick="changeTool(this.value);"></input>
+		<input type="image" class="toolbtn" src="./img/spray.png" value="spray" onclick="changeTool(this.value);"></input>
+		<input type="image" class="toolbtn" src="./img/star0.png" value="star" onclick="changeTool(this.value);"></input>
+		<br>
+		<font>Tool:</font><br>
+		<input type="image" class="toolbtn" src="./img/eraser.png" value="eraser" onclick="changeTool(this.value);"></input>
+		<!--input type="image" class="toolbtn" src="./img/A.png" value="word" onclick="changeTool(this.value);"></input-->
+		<input type="image" class="toolbtn" src="./img/folder.png" onclick="clickFile();"></input>
+		<a href="#" download="image.png" onclick="this.href = canvas.toDataURL();"><input type="image" class="toolbtn" src="./img/save.png"></input></a>
+		<input type="file" id="files" style="visibility:hidden; display:none;" onchange="loadFile();"></input>
+		<br>
+		<font>Shape:</font><br>
+		<input type="image" class="toolbtn" src="./img/line.png" value="line" onclick="changeTool(this.value);"></input>
+		<input type="image" class="toolbtn" src="./img/circle.png" value="circle" onclick="changeTool(this.value);"></input>
+		<input type="image" class="toolbtn" src="./img/square.png" value="square" onclick="changeTool(this.value);"></input>
+		<input type="image" class="toolbtn" src="./img/fillsqu.png" value="fillsqr" onclick="changeTool(this.value);"></input>
+		<input type="image" class="toolbtn" src="./img/fillcir.png" value="fillcir" onclick="changeTool(this.value);"></input>
+		<br>
+		<br>
+		<font>Stroke Size:</font>
+		<input type="range" value="3" min='1' max='30' onchange="changeThickness(this.value);"/>
+		<label id="thickVal" class="text">3</label>
+		<br>
+		<font>Eraser Size:</font>
+		<input type="range" value="10" min='1' max='30' onchange="changeEraSize(this.value);"/>
+		<label id="eraVal" class="text">10</label>
+		<br>
+		<br>
+		<font>Color:</font>
+		<input type="color" id="fgColor" value="#000000" onchange="changeFgColor(this.value);"/>
+		<font>Background:</font>
+		<input type="color" id="bgColor" value="#FFFFFF" onchange="changeBgColor(this.value);"/>
+		<br>
+		<br>
+		<input type="button" class="btn" value="clear" onclick="clearAll();"></input><br>
+	
+	</div>
+	
+	<div id="painting">
+		<canvas id="myCanvas" width="800" height="500" onmousedown="mouseDown()" onmousemove="mouseMove()" onmouseup="mouseUp()"></canvas>
+		
+	</div>
+	
+</body>
+
+</html>
