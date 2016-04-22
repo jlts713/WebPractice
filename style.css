@@ -3,63 +3,6 @@
 	font-family:微軟正黑體;
 }
 
-#header{
-	font-size:40px;
-	text-align:center;	/*置中對齊*/
-	font-family:MV Boli, cursive;
-}
-
-#mypic{
-	width:250px; 
-	height:250px;
-	position:absolute;
-	left:150px;
-	top: 100px;
-}
-
-.block{
-	width:60%; 
-	height:150px;
-	position:absolute;
-	background-color:rgba(255,255,255,0.5);
-	border:0;
-    border-radius: 15px;
-	padding:10px;
-	font-size:22px;
-}
-.title{
-	font-family:微軟正黑體;
-	font-size:24px;
-	font-weight:bold;
-}
-
-.chi{
-	font-size:22px;
-	white-space:pre;
-}
-.eng{
-	font-size:18px;
-	white-space:pre;
-	color:gray;
-}
-#name{
-	position:absolute;
-	left:145px;
-	top:370px;
-	font-family:MV Boli, cursive;
-	font-size:25px;
-}
-
-#edu{
-	left:450px;
-	top:100px;
-}
-
-#exp{
-	left:450px;
-	top:280px;
-}
-
 #hwlist{
 	position:relative;
 	top:400px;
@@ -84,9 +27,4 @@ ul{
 
 li{
 	float:left;
-}
-
-p{
-	padding:0;
-	margin:0;
 }
